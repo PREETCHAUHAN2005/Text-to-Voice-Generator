@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #010758, #490d61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: aliceblue;
+}
+.hero h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+.hero h1 span {
+  color: #ff2963;
+}
+textarea {
+  width: 600px;
+  height: 250px;
+  background: #403d84;
+  color: #fff;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  padding: 20px;
+  border-radius: 10px;
+  resize: none;
+  margin-bottom: 30px;
+}
+textarea::placeholder {
+  font-size: 16px;
+  color: #ddd;
+}
+.row {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+button {
+  background: #ff2963;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 35px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+button img {
+  width: 16px;
+  margin-right: 10px;
+}
+select {
+  flex: 1;
+  color: #fff;
+  background: #403d84;
+  height: 50px;
+  padding: 0 20px;
+  outline: 0;
+  border: 0;
+  border-radius: 35px;
+  appearance: none;
+  background-image: url(dropdown.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-x: calc(100% - 20px);
+  background-position-y: 20px;
+}
+#pauseBtn {
+  padding: 10px 20px;
+  background-color: #d13f13;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  margin-left: 1;
+  cursor: pointer;
+}
+#pauseBtn:hover {
+  background-color: #d32f2f;
+}
+
+.sliders {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.slider-group {
+  margin-bottom: 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+#darkModeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+  transition: 0.4s, transform 0.2s;
+  z-index: 1000;
+}
+
+#darkModeToggle:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+/* 🎨 Dark Mode style for the button itself */
+.dark-mode #darkModeToggle {
+  background: #bb86fc;
+}
+
+.dark-mode #darkModeToggle:hover {
+  background: #9b69d8;
+}
+#darkModeToggle {
+  backdrop-filter: blur(10px);
+}
+/* 🔥 Full Dark Mode Theme */
+.dark-mode .hero {
+  background: linear-gradient(45deg, #0d0d0d, #1a1a1a); /* darker background */
+  color: #ffffff;
+}
+
+.dark-mode textarea {
+  background: #262626;
+  color: #ffffff;
+}
+
+.dark-mode select {
+  background: #262626;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background: #ff4081;
+  color: #ffffff;
+}
+
+.dark-mode #pauseBtn {
+  background-color: #ff5722;
+}
+
+.dark-mode label {
+  color: #ffffff;
+}
+
+.dark-mode input[type="range"] {
+  background: #555;
+}
