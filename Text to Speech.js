@@ -1,6 +1,5 @@
 const pauseBtn = document.getElementById("pauseBtn");
 const speakBtn = document.getElementById("speakBtn");
-// const voiceSelect = document.getElementById("voiceSelect");
 const rate = document.getElementById("rate");
 const pitch = document.getElementById("pitch");
 const rateValue = document.getElementById("rateValue");
@@ -16,9 +15,9 @@ darkModeToggle.addEventListener("click", () => {
 
     
     if (document.body.classList.contains("dark-mode")) {
-        darkModeToggle.textContent = "☀️ Light Mode";
+        darkModeToggle.textContent = "Light Mode";
     } else {
-        darkModeToggle.textContent = "🌙 Dark Mode";
+        darkModeToggle.textContent = "Dark Mode";
     }
 });
 
@@ -48,19 +47,6 @@ rate.addEventListener("input", () => {
     speech.rate = rate.value;
 });
 
-
-// speakBtn.addEventListener("click",()=>{
-//     if (textInput.value.trim() === "") {
-//         alert("Please enter some text!");
-//         return;
-//     }
-
-//     speech.text= document.querySelector("textarea").value;
-//     speech.rate = rate.value;
-//     speech.pitch = pitch.value;
-//     window.speechSynthesis.cancel();
-//     window.speechSynthesis.speak(speech);
-// });
 speakBtn.addEventListener("click", () => {
     if (textInput.value.trim() === "") {
         alert("Please enter some text!");
@@ -77,11 +63,12 @@ pauseBtn.addEventListener("click", () => {
         if (window.speechSynthesis.paused) {
             window.speechSynthesis.resume();
             pauseBtn.textContent = "Pause";
-            pauseBtn.style.backgroundColor = "#f44336"; // Red
+            pauseBtn.style.backgroundColor = "#f44336";
         } else {
             window.speechSynthesis.pause();
             pauseBtn.textContent = "Resume";
-            pauseBtn.style.backgroundColor = "#2196F3"; // Blue
+            pauseBtn.style.backgroundColor = "#2196F3"; 
         }
     }
+
 });
